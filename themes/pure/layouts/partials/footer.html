@@ -1,0 +1,14 @@
+<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+  {{- partial "social.html" . }}
+  <div class="copyright">
+    {{-  $current := now.Format "2006" }}
+    &copy;
+    {{- if ne .Site.Params.since $current -}}
+        {{- print .Site.Params.since }}  -
+    {{- end }}
+    {{ $current }}
+    <div class="publishby">
+        {{T "copyright_powered_by"}} <a href="https://gohugo.io/" target="_blank"> Hugo </a>.
+    </div>
+  </div>
+</footer>
