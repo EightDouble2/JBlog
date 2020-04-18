@@ -3,7 +3,13 @@
 <main class="main" role="main">
     <article class="article article-categories article-type-list" itemscope="">
         <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">{{- T .Title }}</h1>
+            <h1 itemprop="name" class="hidden-xs">
+                {{- if eq (T .Title) "" }}
+                    {{- .Title }}
+                {{- else }}
+                    {{- T .Title }}
+                {{- end }}
+            </h1>
             <p class="text-muted hidden-xs">{{- T "total_category" (len $categories) }}</p>
             <nav role="navigation" id="nav-main" class="okayNav">
                 <ul>
@@ -23,7 +29,7 @@
                             <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
                             {{- .Name }}
                         </a>
-                        <small class="text-muted">(Total {{- len .Pages }} articles)</small>
+                        <small class="text-muted">({{- T "total_article" (len $categories) }})</small>
                     </h4>
                 </div>
                 <div id="collapse{{ .Name | md5 }}" class="panel-collapse collapse in" role="tabpanel"

@@ -3,7 +3,13 @@
 <main class="main" role="main">
     <article class="article article-tags post-type-list" itemscope="">
         <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">{{- T .Title }}</h1>
+            <h1 itemprop="name" class="hidden-xs">
+                {{- if eq (T .Title) "" }}
+                    {{- .Title }}
+                {{- else }}
+                    {{- T .Title }}
+                {{- end }}
+            </h1>
             <p class="text-muted hidden-xs">{{- T "total_tag" (len $tags) }}</p>
             <nav role="navigation" id="nav-main" class="okayNav">
                 <ul>
