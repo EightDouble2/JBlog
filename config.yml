@@ -65,7 +65,7 @@ menu:
 
 params:
   since: 2020
-  dateFormatToUse: "2006-01-02 15:04:05"
+  dateFormatToUse: "2006-01-02" # 2006-01-02 15:04:05
   enablePostCopyright: true
   # the directory under content folder that you want to render
   mainSections: ["technicals", "environments", "menus"]

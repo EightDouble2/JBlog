@@ -25,7 +25,7 @@
             {{- range $name, $taxonomy := $tags  }}
             <h3 class="panel-title mb-1x">
                 <a href="{{ "tags/" | absURL}}{{ $name | urlize }}" title="#{{- $name }}"># {{ $name }}</a>
-                <small class="text-muted">({{- T "total_article" (len $tags) }})</small>
+                <small class="text-muted">({{- T "total_article" (.Count) }})</small>
             </h3>
             <div class="row">
                 {{- range $taxonomy }}
