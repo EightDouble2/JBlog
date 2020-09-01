@@ -19,7 +19,7 @@ Spring Web MVC 框架提供了 MVC (模型 - 视图 - 控制器) 架构和用于
 
 Spring Web MVC 框架是围绕 DispatcherServlet 设计的，它处理所有的 HTTP 请求和响应。 Spring Web MVC DispatcherServlet 的请求处理工作流如下图所示：
 
-![img](/img/technicals/009001.png)
+![img](/img/Spring MVC001.png)
 
 以下是对应于到 DispatcherServlet 的传入 HTTP 请求的事件顺序：
 

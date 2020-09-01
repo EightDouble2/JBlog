@@ -121,7 +121,7 @@ Bootstrap 官方文档中有关网格系统的描述：
 
 响应式网格系统随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多 12 列。
 
-![img](/img/technicals/004001.png)
+![img](/img/Bootstrap001.png)
 
 ## Bootstrap 网格系统（Grid System）的工作原理
 

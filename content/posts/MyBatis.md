@@ -11,7 +11,7 @@ MyBatis 是一个优秀的基于 Java 的持久层框架，它内部封装了 JD
 
 Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement、PreparedStatement 等）配置起来，并通过 Java 对象和 Statement 中 SQL 的动态参数进行映射生成最终执行的 SQL 语句，最后由 MyBatis 框架执行 SQL 并将结果映射成 Java 对象并返回。
 
-![img](/img/technicals/010001.png)
+![img](/img/MyBatis001.png)
 
 ## MyBatis 与 Hibernate
 
@@ -25,7 +25,7 @@ Hibernate 框架是提供了全面的数据库封装机制的 **“全自动”*
 - 因为需要程序员自己去编写 SQL 语句，程序员可以结合数据库自身的特点灵活控制 SQL 语句，因此能够实现比 Hibernate 等全自动 ORM 框架更高的查询效率，能够完成复杂查询。
 - 简单，易于学习，易于使用，上手快。
 
-![img](/img/technicals/010002.png)
+![img](/img/MyBatis002.png)
 
 # Druid 简介
 
@@ -171,7 +171,7 @@ Druid 提供了大量的监控数据，只需要在 `web.xml` 中配置一个 Se
 
 打开浏览器，输入：http://localhost:8080/druid/index.html 浏览器显示效果如下：
 
-![img](/img/technicals/010003.png)
+![img](/img/MyBatis003.png)
 
 # Spring 整合 MyBatis
 
@@ -700,7 +700,7 @@ public void testSelectByName() {
 
 动态 SQL，主要用于解决查询条件不确定的情况：在程序运行期间，根据用户提交的查询条件进行查询。提交的查询条件不同，执行的 SQL 语句不同。若将每种可能的情况均逐一列出，对所有条件进行排列组合，将会出现大量的 SQL 语句。此时，可使用动态 SQL 来解决这样的问题。
 
-![img](/img/technicals/010004.png)
+![img](/img/MyBatis004.png)
 
 动态 SQL，即通过 MyBatis 提供的各种标签对条件作出判断以实现动态拼接 SQL 语句。
 
@@ -712,7 +712,7 @@ public void testSelectByName() {
 
 特别是对于小于号（`<`），在 XML 中是绝对不能出现的。否则，一定出错。
 
-![img](/img/technicals/010005.png)
+![img](/img/MyBatis005.png)
 
 ## if 标签
 
@@ -824,7 +824,7 @@ public void testSelectByName() {
 
 动态 SQL 的判断中使用的都是 OGNL 表达式。OGNL 表达式中的数组使用 `array` 表示，数组长度使用 `array.length` 表示。
 
-![img](/img/technicals/010006.png)
+![img](/img/MyBatis006.png)
 
 ```xml
 <!-- foreach -->
@@ -953,5 +953,5 @@ public List<Student> selectByForeachWithListCustom(List<Student> students);
 </select>
 ```
 
-![img](/img/technicals/010007.png)
+![img](/img/MyBatis007.png)
 
